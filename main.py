@@ -41,7 +41,6 @@ def main():
 	
 	app.aboutToQuit.connect(note.NoteWindow.exit)
 	app.exec_()
-	note.saveNotes(windows)
 	
 if __name__ == "__main__": 
 	main()
