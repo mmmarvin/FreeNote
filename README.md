@@ -1,4 +1,4 @@
-#FreeNote v.1.00
+#FreeNote
 =================
 FreeNote is an open source desktop notes application. Create notes and put them anywhere on your destktop.
 
