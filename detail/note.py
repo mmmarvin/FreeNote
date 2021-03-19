@@ -107,10 +107,7 @@ class NoteWindow(QMainWindow):
 								noteSetting.getHeight())
 			self.__mTextEdit.document().setDefaultFont(noteSetting.getFont())
 			self.__mTextEdit.setText(noteSetting.getString())
-      
-	def exit(self):
-		saveNotes(self)
-			
+      			
 	def __changeFont(self):
 		font = QFontDialog.getFont(self)
 		if font[1]:

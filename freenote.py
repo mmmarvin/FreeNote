@@ -21,6 +21,13 @@ import PyQt5
 from PyQt5.QtWidgets import *
 from detail import note
 
+class ExitObject:
+	def __init__(self, windows):
+		self.__mWindows = windows
+		
+	def __call__(self):
+		note.saveNotes(self.__mWindows)
+	
 def main():
 	app = QApplication([])
 	
@@ -39,8 +46,8 @@ def main():
 		noteWindow.show()
 		windows.append(noteWindow)
 	
-	app.aboutToQuit.connect(note.NoteWindow.exit)
+	app.aboutToQuit.connect(ExitObject(windows))
 	app.exec_()
-	
+		
 if __name__ == "__main__": 
 	main()
